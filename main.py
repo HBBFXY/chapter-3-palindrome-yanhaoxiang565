@@ -1,13 +1,12 @@
-num_str = input("请输入一个5位数字：").strip()
+# 获取用户输入并去除前后空格
+input_str = input().strip()
 
-# 输入验证：必须是5位纯数字
-if not (len(num_str) == 5 and num_str.isdigit()):
-    print("错误提示")
+# 检查输入是否为5位且全为数字
+if len(input_str) != 5 or not input_str.isdigit():
+    print("错误")
 else:
-    # 字符串反转判断回文
-    reversed_str = num_str[::-1]
-    if num_str == reversed_str:
+    # 反转字符串并与原字符串比较
+    if input_str == input_str[::-1]:
         print("是回文数")
     else:
         print("不是回文数")
-代码解析
