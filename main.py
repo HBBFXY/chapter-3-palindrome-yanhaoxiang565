@@ -1,15 +1,13 @@
-def main():
-    num = input().strip()
-    
-    if len(num) != 5:
-        print("输入错误，请输入一个5位数字")
-        return
-        
-    for char in num:
-        if not char.isdigit():
-            print("输入错误，请输入一个5位数字")
-            return
-            
-    # 判断回文
-    is_palindrome = True
-    for i in range(2):
+num_str = input("请输入一个5位数字：").strip()
+
+# 输入验证：必须是5位纯数字
+if not (len(num_str) == 5 and num_str.isdigit()):
+    print("错误提示")
+else:
+    # 字符串反转判断回文
+    reversed_str = num_str[::-1]
+    if num_str == reversed_str:
+        print("是回文数")
+    else:
+        print("不是回文数")
+代码解析
